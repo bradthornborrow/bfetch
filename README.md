@@ -1,5 +1,5 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/6799467/65944518-68834d80-e421-11e9-9b14-6ca26a16108a.png" width="350px"></p>
-<h1 align="center">pfetch</h1>
+<h1 align="center">bfetch</h1>
 <p align="center">A pretty system information tool written in POSIX sh</p><br>
 
 <img src="https://user-images.githubusercontent.com/6799467/65945384-5bfff480-e423-11e9-863e-4e7cf16eb648.png" width="40%" align="right">
@@ -42,7 +42,7 @@ picture"!
 
 ## Configuration
 
-`pfetch` is configured through environment variables.
+`bfetch` is configured through environment variables.
 
 ```sh
 # Which information to display.
@@ -51,58 +51,58 @@ picture"!
 # Valid: space separated string
 #
 # OFF by default: shell editor wm de palette
-PF_INFO="ascii title os host kernel uptime pkgs memory"
+BF_INFO="ascii title os host kernel uptime pkgs memory"
 
 # Example: Only ASCII.
-PF_INFO="ascii"
+BF_INFO="ascii"
 
 # Example: Only Information.
-PF_INFO="title os host kernel uptime pkgs memory"
+BF_INFO="title os host kernel uptime pkgs memory"
 
-# A file to source before running pfetch.
+# A file to source before running bfetch.
 # Default: unset
 # Valid: A shell script
-PF_SOURCE=""
+BF_SOURCE=""
 
 # Separator between info name and info data.
 # Default: unset
 # Valid: string
-PF_SEP=":"
+BF_SEP=":"
 
 # Enable/Disable colors in output:
 # Default: 1
 # Valid: 1 (enabled), 0 (disabled)
-PF_COLOR=1
+BF_COLOR=1
 
 # Color of info names:
 # Default: unset (auto)
 # Valid: 0-9
-PF_COL1=4
+BF_COL1=4
 
 # Color of info data:
 # Default: unset (auto)
 # Valid: 0-9
-PF_COL2=9
+BF_COL2=9
 
 # Color of title data:
 # Default: unset (auto)
 # Valid: 0-9
-PF_COL3=1
+BF_COL3=1
 
 # Alignment padding.
 # Default: unset (auto)
 # Valid: int
-PF_ALIGN=""
+BF_ALIGN=""
 
 # Which ascii art to use.
 # Default: unset (auto)
 # Valid: string
-PF_ASCII="openbsd"
+BF_ASCII="openbsd"
 
 # The below environment variables control more
-# than just 'pfetch' and can be passed using
-# 'HOSTNAME=cool_pc pfetch' to restrict their
-# usage solely to 'pfetch'.
+# than just 'bfetch' and can be passed using
+# 'HOSTNAME=cool_pc bfetch' to restrict their
+# usage solely to 'bfetch'.
 
 # Which user to display.
 USER=""
@@ -119,8 +119,3 @@ SHELL=""
 # Which desktop environment to display.
 XDG_CURRENT_DESKTOP=""
 ```
-
-## Credit
-
-- [ufetch](https://gitlab.com/jschx/ufetch): Lots of ASCII logos.
-    - Contrary to the belief of a certain youtuber, `pfetch` shares **zero** code with `ufetch`. Only some of the ASCII logos were used.
